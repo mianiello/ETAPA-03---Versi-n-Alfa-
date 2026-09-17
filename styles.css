@@ -1,0 +1,170 @@
+/* =========================================
+   TA-DIN | Design System & Presentación E2
+   Estilo: Cyber / Electric Violet Minimalist
+   ========================================= */
+
+:root {
+  --bg-dark:        #0B0E14;
+  --bg-dark-mid:    #121824;
+  --bg-card:        #1A2332;
+  --bg-footer:      #06080C;
+
+  /* Texto */
+  --text-light:     #FFFFFF;
+  --text-body:      #94A3B8;
+  --text-muted:     #64748B;
+
+  /* Acentos */
+  --accent:         #7C3AED;
+  --accent-bright:  #A855F7;
+  --accent-glow:    rgba(124, 58, 237, 0.25);
+
+  --nav-shadow:     rgba(0, 0, 0, 0.4);
+
+  --font-brand:     'Barlow Condensed', sans-serif;
+  --font-body:      'Barlow', sans-serif;
+
+  --radius-sm:      8px;
+  --radius-md:      16px;
+  --transition:     0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --nav-h:          64px;
+  --dots-h:         44px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--bg-footer);
+  color: var(--text-light);
+  overflow: hidden;
+}
+
+/* Nav Bar */
+.slide-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(11, 14, 20, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.nav-brand {
+  font-family: var(--font-brand);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: linear-gradient(135deg, #FFF 0%, var(--accent-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 1rem;
+}
+.nav-controls { display: flex; align-items: center; gap: 0.75rem; }
+.slide-counter {
+  font-family: var(--font-brand);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  min-width: 50px;
+  text-align: center;
+}
+.nav-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  width: 36px; height: 36px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.nav-btn:hover { background: var(--accent); border-color: var(--accent-bright); }
+.nav-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+
+/* Slide Base Structure */
+.slides-container { height: 100vh; overflow: hidden; }
+.slide {
+  display: none;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: var(--nav-h);
+  padding-bottom: var(--dots-h);
+}
+.slide.active {
+  display: block;
+  animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.slide-content {
+  min-height: calc(100vh - var(--nav-h) - var(--dots-h));
+  padding: 3rem 8%;
+  background: var(--bg-dark);
+}
+
+.slide-number {
+  font-family: var(--font-brand);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.3;
+}
+.slide-title {
+  font-family: var(--font-brand);
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.divider {
+  width: 60px; height: 4px;
+  background: var(--accent-bright);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Layout Grids */
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.card {
+  background: var(--bg-dark-mid);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Dot Navigation */
+.dot-nav {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+.dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.dot.active {
+  background: var(--accent-bright);
+  box-shadow: 0 0 10px var(--accent-bright);
+  transform: scale(1.2);
+}
