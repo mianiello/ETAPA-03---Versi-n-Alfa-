@@ -26,7 +26,6 @@
             --primary-light: #d1fae5;
             --primary-dark: #047857;
             
-            --accent: #10b981;
             --border-light: #e2e8f0;
             --border-dark: #134e40;
             
@@ -58,7 +57,6 @@
             overflow: hidden;
         }
 
-        /* Presentation Container */
         .presentation-container {
             width: 100vw;
             height: 100vh;
@@ -72,7 +70,6 @@
             overflow: hidden;
         }
 
-        /* Slides Wrapper */
         .slides-wrapper {
             flex: 1;
             position: relative;
@@ -105,13 +102,11 @@
             z-index: 2;
         }
 
-        /* Theme Variations for Slides */
         .slide.theme-dark {
             background-color: var(--bg-dark);
             color: var(--text-dark);
         }
 
-        /* Slide Header */
         .slide-header {
             display: flex;
             justify-content: space-between;
@@ -165,7 +160,6 @@
             color: var(--primary-bright);
         }
 
-        /* Grid Layouts */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -180,14 +174,6 @@
             flex: 1;
         }
 
-        .grid-1-2 {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            flex: 1;
-        }
-
-        /* Card Elements */
         .card {
             background: var(--bg-light-card);
             border: 1px solid var(--border-light);
@@ -234,7 +220,6 @@
             font-weight: 700;
         }
 
-        /* Typography & Lists */
         p, li {
             font-size: 0.95rem;
             line-height: 1.6;
@@ -279,7 +264,6 @@
             color: var(--primary-bright);
         }
 
-        /* Specific Cover Slide */
         .cover-content {
             display: flex;
             flex-direction: column;
@@ -331,7 +315,6 @@
             font-weight: 600;
         }
 
-        /* Matrix Status Palette */
         .status-pill {
             display: inline-flex;
             align-items: center;
@@ -350,7 +333,6 @@
         .bg-rojo { background-color: var(--status-red); }
         .bg-gris { background-color: var(--status-gray); }
 
-        /* Code Block Mock */
         .code-box {
             font-family: var(--font-code);
             background: #020d09;
@@ -363,17 +345,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Images / Visual Mockups */
-        .img-card {
-            width: 100%;
-            height: 100%;
-            max-height: 380px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid var(--border-light);
-        }
-
-        /* Navigation Bar */
         .nav-bar {
             height: 60px;
             background: var(--bg-dark);
@@ -421,16 +392,6 @@
             font-weight: 600;
             font-family: var(--font-code);
         }
-
-        /* Helper for editable text */
-        [contenteditable="true"]:hover {
-            outline: 1px dashed var(--primary-bright);
-        }
-
-        [contenteditable="true"]:focus {
-            outline: 2px solid var(--primary-bright);
-            background: rgba(52, 211, 153, 0.05);
-        }
     </style>
 </head>
 <body>
@@ -438,60 +399,60 @@
     <div class="presentation-container">
         <div class="slides-wrapper">
 
-            <!-- DIAPO 1: CARÁTULA -->
+            <!-- DIAPO 1 -->
             <div class="slide theme-dark active" id="slide-1">
                 <div class="cover-content">
                     <div style="margin-bottom: 1rem;">
-                        <span class="badge-tag" contenteditable="true">CURSO 7° INFORMÁTICA B • EQUIPO N° 6</span>
+                        <span class="badge-tag">CURSO 7° INFORMÁTICA B • EQUIPO N° 6</span>
                     </div>
-                    <h1 class="cover-title" contenteditable="true">PROYECTO TA-DIN</h1>
-                    <p class="cover-subtitle" contenteditable="true">Digitalización de procesos para una empresa de pintura electrostática</p>
+                    <h1 class="cover-title">PROYECTO TA-DIN</h1>
+                    <p class="cover-subtitle">Digitalización de procesos para una empresa de pintura electrostática</p>
                     
                     <div style="margin-top: 1.5rem;">
-                        <p style="color: var(--text-dark-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;" contenteditable="true">Integrantes y Roles</p>
+                        <p style="color: var(--text-dark-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Integrantes y Roles</p>
                         <div class="team-grid">
                             <div class="team-member">
-                                <div class="name" contenteditable="true">Mía Niello</div>
-                                <div class="role" contenteditable="true">PM / Frontend</div>
+                                <div class="name">Mía Niello</div>
+                                <div class="role">PM / Frontend</div>
                             </div>
                             <div class="team-member">
-                                <div class="name" contenteditable="true">Catalina Quintana</div>
-                                <div class="role" contenteditable="true">Frontend · UX/UI</div>
+                                <div class="name">Catalina Quintana</div>
+                                <div class="role">Frontend · UX/UI</div>
                             </div>
                             <div class="team-member">
-                                <div class="name" contenteditable="true">Tatiana Bravo</div>
-                                <div class="role" contenteditable="true">Backend</div>
+                                <div class="name">Tatiana Bravo</div>
+                                <div class="role">Backend</div>
                             </div>
                             <div class="team-member">
-                                <div class="name" contenteditable="true">Nicolás Perri</div>
-                                <div class="role" contenteditable="true">DB · Backend</div>
+                                <div class="name">Nicolás Perri</div>
+                                <div class="role">DB · Backend</div>
                             </div>
                             <div class="team-member">
-                                <div class="name" contenteditable="true">Milagros Camino</div>
-                                <div class="role" contenteditable="true">Infraestructura / Seg.</div>
+                                <div class="name">Milagros Camino</div>
+                                <div class="role">Infraestructura / Seg.</div>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 2rem; color: var(--text-dark-muted); font-size: 0.85rem; font-family: var(--font-code);" contenteditable="true">
+                    <div style="margin-top: 2rem; color: var(--text-dark-muted); font-size: 0.85rem; font-family: var(--font-code);">
                         Fecha: Septiembre 2026
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 2: PROPÓSITO Y MÓDULOS -->
+            <!-- DIAPO 2 -->
             <div class="slide" id="slide-2">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Contexto & Alcance</p>
-                        <h2 contenteditable="true">Propósito del Proyecto y Módulos</h2>
+                        <p>Contexto & Alcance</p>
+                        <h2>Propósito del Proyecto y Módulos</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 02</span>
+                    <span class="badge-tag">DIAPO 02</span>
                 </div>
 
                 <div class="card" style="margin-bottom: 1.5rem; background: var(--primary-light); border-color: #a7f3d0;">
-                    <p style="color: var(--primary-dark); font-weight: 600; font-size: 1.05rem;" contenteditable="true">
-                        🎯 <strong>Objetivo Principal:</strong> TA-DIN busca profesionalizarse para captar clientes en los sectores petrolero, minero y telefónico. La digitalización de sus procesos sienta las bases indispensables para avanzar hacia la certificación de las normas <strong>ISO 9001</strong> e <strong>ISO 14001</strong>.
+                    <p style="color: var(--primary-dark); font-weight: 600; font-size: 1.05rem;">
+                        🎯 <strong>Objetivo Principal:</strong> TA-DIN busca profesionalizarse para captar clientes en los sectores petrolero, minero y telefónico[cite: 1]. La digitalización de sus procesos sienta las bases indispensables para avanzar hacia la certificación de las normas <strong>ISO 9001</strong> e <strong>ISO 14001</strong>[cite: 1].
                     </p>
                 </div>
 
@@ -499,251 +460,255 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">A</div>
-                            <div class="card-title" contenteditable="true">Página Web</div>
+                            <div class="card-title">Página Web</div>
                         </div>
                         <ul class="styled-list">
-                            <li contenteditable="true">Interfaz pública optimizada.</li>
-                            <li contenteditable="true">Posiciona la presencia digital de TA-DIN.</li>
-                            <li contenteditable="true">Canaliza consultas a través de Google Forms.</li>
-                            <li contenteditable="true">Captación ágil de clientes B2B.</li>
+                            <li>Interfaz pública optimizada[cite: 1].</li>
+                            <li>Posiciona la presencia digital de TA-DIN[cite: 1].</li>
+                            <li>Canaliza consultas a través de Google Forms[cite: 1].</li>
+                            <li>Captación ágil de clientes B2B[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">B</div>
-                            <div class="card-title" contenteditable="true">Reloj Biométrico</div>
+                            <div class="card-title">Reloj Biométrico</div>
                         </div>
                         <ul class="styled-list">
-                            <li contenteditable="true">Registro de fichadas en tiempo real.</li>
-                            <li contenteditable="true">Hardware biométrico ZKTeco.</li>
-                            <li contenteditable="true">Conexión directa a base de datos MySQL.</li>
-                            <li contenteditable="true">Seguimiento exacto de horarios y presentismo.</li>
+                            <li>Registro de fichadas en tiempo real[cite: 1].</li>
+                            <li>Hardware biométrico ZKTeco[cite: 1].</li>
+                            <li>Conexión directa a base de datos MySQL[cite: 1].</li>
+                            <li>Seguimiento exacto de horarios y presentismo[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">C</div>
-                            <div class="card-title" contenteditable="true">Plataforma RRHH</div>
+                            <div class="card-title">Plataforma RRHH</div>
                         </div>
                         <ul class="styled-list">
-                            <li contenteditable="true">Procesamiento de datos de asistencia.</li>
-                            <li contenteditable="true">Paneles visuales y dashboards.</li>
-                            <li contenteditable="true">Cálculo exacto de horas netas trabajadas.</li>
-                            <li contenteditable="true">Exportación de liquidación de sueldos.</li>
+                            <li>Procesamiento de datos de asistencia[cite: 1].</li>
+                            <li>Paneles visuales y dashboards[cite: 1].</li>
+                            <li>Cálculo exacto de horas netas trabajadas[cite: 1].</li>
+                            <li>Exportación de liquidación de sueldos[cite: 1].</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 3: AVANCES & TECNOLOGÍA NFC -->
+            <!-- DIAPO 3 -->
             <div class="slide" id="slide-3">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Despliegue Comercial</p>
-                        <h2 contenteditable="true">Avances en la Web e Integración NFC</h2>
+                        <p>Despliegue Comercial</p>
+                        <h2>Avances en la Web e Integración NFC</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 03</span>
+                    <span class="badge-tag">DIAPO 03</span>
                 </div>
 
                 <div class="grid-2">
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
                         <div class="card">
-                            <div class="card-title" style="margin-bottom: 0.5rem;" contenteditable="true">Estado de la Web Institucional</div>
-                            <p contenteditable="true">La estructura principal del sitio web (<strong>tadin.com.ar</strong>) se encuentra finalizada. Los trabajos recientes correspondieron a ajustes de estilo y optimizaciones menores.</p>
+                            <div class="card-title" style="margin-bottom: 0.5rem;">Estado de la Web Institucional</div>
+                            <p>La estructura principal del sitio web (<strong>tadin.com.ar</strong>) se encuentra finalizada[cite: 1]. Los trabajos recientes correspondieron a ajustes de estilo y optimizaciones menores[cite: 1].</p>
                         </div>
 
                         <div class="card">
-                            <div class="card-title" style="margin-bottom: 0.5rem;" contenteditable="true">Innovación Comercial: Tarjetas NFC + QR</div>
-                            <p contenteditable="true" style="margin-bottom: 0.75rem;">Se desplegó la ruta <strong>tadin.com.ar/contacto</strong> para interactuar de forma inmediata con clientes en reuniones o eventos de la industria:</p>
+                            <div class="card-title" style="margin-bottom: 0.5rem;">Innovación Comercial: Tarjetas NFC + QR</div>
+                            <p style="margin-bottom: 0.75rem;">Se desplegó la ruta <strong>tadin.com.ar/contacto</strong> para interactuar de forma inmediata con clientes en reuniones o eventos de la industria[cite: 1]:</p>
                             <ul class="styled-list">
-                                <li contenteditable="true"><strong>Tecnología NFC:</strong> Contacto directo aproximando la tarjeta al smartphone.</li>
-                                <li contenteditable="true"><strong>Código QR de respaldo:</strong> Para dispositivos sin sensor NFC activo.</li>
+                                <li><strong>Tecnología NFC:</strong> Contacto directo aproximando la tarjeta al smartphone[cite: 1].</li>
+                                <li><strong>Código QR de respaldo:</strong> Para dispositivos sin sensor NFC activo[cite: 1].</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="card" style="align-items: center; justify-content: center; background: #fafafa;">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/4026302465452109570_0" alt="Tarjeta NFC TA-DIN" class="img-card">
+                    <div class="card" style="align-items: center; justify-content: center; background: #fafafa; border: 2px dashed var(--border-light);">
+                        <div style="text-align: center; color: var(--text-light-muted);">
+                            <p style="font-size: 2rem; margin-bottom: 0.5rem;">💳</p>
+                            <p style="font-weight: 700;">Tarjeta Virtual NFC & QR</p>
+                            <p style="font-size: 0.85rem; margin-top: 0.25rem;">tadin.com.ar/contacto</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 4: MÓDULO C - RECURSOS HUMANOS -->
+            <!-- DIAPO 4 -->
             <div class="slide" id="slide-4">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Módulo C</p>
-                        <h2 contenteditable="true">Página de Recursos Humanos</h2>
+                        <p>Módulo C</p>
+                        <h2>Página de Recursos Humanos</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 04</span>
+                    <span class="badge-tag">DIAPO 04</span>
                 </div>
 
                 <div class="grid-3">
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">1. Dashboard (Panel Principal)</div>
-                        <p contenteditable="true">Estado de red (IP/puerto del biométrico), total de empleados activos, fichadas del día y los últimos 5 movimientos físicos registrados.</p>
+                        <div class="card-title" style="color: var(--primary-dark);">1. Dashboard (Panel Principal)</div>
+                        <p>Estado de red (IP/puerto del biométrico), total de empleados activos, fichadas del día y los últimos 5 movimientos físicos registrados[cite: 1].</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">2. Gestión de Empleados</div>
-                        <p contenteditable="true">Altas y bajas. <strong>Requisito clave:</strong> El "ID de Reloj" debe coincidir estrictamente con el número de enrolamiento del equipo ZKTeco.</p>
+                        <div class="card-title" style="color: var(--primary-dark);">2. Gestión de Empleados</div>
+                        <p>Altas y bajas[cite: 1]. <strong>Requisito clave:</strong> El "ID de Reloj" debe coincidir estrictamente con el número de enrolamiento del equipo ZKTeco[cite: 1].</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">3. Registros Crudos</div>
-                        <p contenteditable="true">Caja negra del sistema. Almacena marcaciones sin procesar. Permite cargas manuales justificadas bajo clave de administrador.</p>
+                        <div class="card-title" style="color: var(--primary-dark);">3. Registros Crudos</div>
+                        <p>Caja negra del sistema[cite: 1]. Almacena marcaciones sin procesar[cite: 1]. Permite cargas manuales justificadas bajo clave de administrador[cite: 1].</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">4. Liquidación de Horas</div>
-                        <p contenteditable="true">Motor matemático. Filtra llegadas tardes y turnos incompletos para determinar Horas Netas a Pagar. Exporta a Excel profesional.</p>
+                        <div class="card-title" style="color: var(--primary-dark);">4. Liquidación de Horas</div>
+                        <p>Motor matemático[cite: 1]. Filtra llegadas tardes y turnos incompletos para determinar Horas Netas a Pagar[cite: 1]. Exporta a Excel profesional[cite: 1].</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">5. Matriz Mensual</div>
-                        <p contenteditable="true">Mapa de calor interactivo que audita el mes completo mediante códigos de color visuales (Presente, Ausente, Tarde, Olvido).</p>
+                        <div class="card-title" style="color: var(--primary-dark);">5. Matriz Mensual</div>
+                        <p>Mapa de calor interactivo que audita el mes completo mediante códigos de color visuales (Presente, Ausente, Tarde, Olvido)[cite: 1].</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary-dark);" contenteditable="true">6. Configuración de Red</div>
-                        <p contenteditable="true">Administración de la IP del reloj, turnos corporativos (mañana/tarde) y los minutos de tolerancia de llegada tarde.</p>
+                        <div class="card-title" style="color: var(--primary-dark);">6. Configuración de Red</div>
+                        <p>Administración de la IP del reloj, turnos corporativos (mañana/tarde) y los minutos de tolerancia de llegada tarde[cite: 1].</p>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 5: SEGURIDAD Y PRIVILEGIOS -->
+            <!-- DIAPO 5 -->
             <div class="slide" id="slide-5">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Seguridad del Sistema</p>
-                        <h2 contenteditable="true">Confirmación de Privilegios y Autenticación</h2>
+                        <p>Seguridad del Sistema</p>
+                        <h2>Confirmación de Privilegios y Autenticación</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 05</span>
+                    <span class="badge-tag">DIAPO 05</span>
                 </div>
 
                 <div class="grid-2">
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">🔐</div>
-                            <div class="card-title" contenteditable="true">1. Control de Sesión Native ($_SESSION)</div>
+                            <div class="card-title">1. Control de Sesión Nativo ($_SESSION)</div>
                         </div>
                         <ul class="styled-list">
-                            <li contenteditable="true">Acceso restringido a todas las rutas PHP.</li>
-                            <li contenteditable="true">Requiere sesión activa iniciada previamente en <code>login.php</code>.</li>
-                            <li contenteditable="true">Si no se detecta token de sesión válido, el servidor redirige automáticamente al login sin renderizar datos.</li>
+                            <li>Acceso restringido a todas las rutas PHP[cite: 1].</li>
+                            <li>Requiere sesión activa iniciada previamente en <code>login.php</code>[cite: 1].</li>
+                            <li>Si no existe token de sesión válido, el servidor redirige automáticamente al login sin renderizar datos[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
                             <div class="card-icon">🛡️</div>
-                            <div class="card-title" contenteditable="true">2. Protocolo de Confirmación de Privilegios</div>
+                            <div class="card-title">2. Protocolo de Confirmación de Privilegios</div>
                         </div>
-                        <p contenteditable="true" style="margin-bottom: 0.75rem;">Para acciones de alto impacto (cargas manuales de marcaciones, justificación de ausencias o eliminación de datos):</p>
+                        <p style="margin-bottom: 0.75rem;">Para acciones de alto impacto (cargas manuales de marcaciones, justificación de ausencias o bajas)[cite: 1]:</p>
                         <ul class="styled-list">
-                            <li contenteditable="true">La sesión de administrador activa <strong>no es suficiente</strong>.</li>
-                            <li contenteditable="true">La petición <code>HTTP POST</code> debe incluir la contraseña actual del administrador.</li>
-                            <li contenteditable="true">El backend re-valida la clave contra MySQL antes de autorizar cualquier sentencia <code>INSERT</code> o <code>DELETE</code>.</li>
+                            <li>La sesión de administrador activa <strong>no es suficiente</strong>[cite: 1].</li>
+                            <li>La petición <code>HTTP POST</code> exige la contraseña del administrador[cite: 1].</li>
+                            <li>El backend re-valida la clave contra MySQL antes de autorizar cualquier sentencia <code>INSERT</code> o <code>DELETE</code>[cite: 1].</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 6: DOCUMENTACIÓN TÉCNICA -->
+            <!-- DIAPO 6 -->
             <div class="slide" id="slide-6">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Arquitectura de Software</p>
-                        <h2 contenteditable="true">Documentación Técnica de Módulos</h2>
+                        <p>Arquitectura de Software</p>
+                        <h2>Documentación Técnica de Módulos</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 06</span>
+                    <span class="badge-tag">DIAPO 06</span>
                 </div>
 
                 <div class="grid-3">
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary);" contenteditable="true">Módulo A: Web Institucional</div>
+                        <div class="card-title" style="color: var(--primary);">Módulo A: Web Institucional</div>
                         <ul class="styled-list" style="margin-top: 0.5rem;">
-                            <li contenteditable="true"><strong>Frontend:</strong> HTML5, CSS3 Responsivo.</li>
-                            <li contenteditable="true"><strong>Servidor:</strong> Hosting DonWeb vía FTP (FileZilla).</li>
-                            <li contenteditable="true"><strong>Objetivo:</strong> Posicionamiento B2B.</li>
+                            <li><strong>Frontend:</strong> HTML5, CSS3 Responsivo[cite: 1].</li>
+                            <li><strong>Servidor:</strong> Hosting DonWeb vía FTP (FileZilla)[cite: 1].</li>
+                            <li><strong>Objetivo:</strong> Posicionamiento B2B[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary);" contenteditable="true">Módulo B: Reloj Biométrico</div>
+                        <div class="card-title" style="color: var(--primary);">Módulo B: Reloj Biométrico</div>
                         <ul class="styled-list" style="margin-top: 0.5rem;">
-                            <li contenteditable="true"><strong>Hardware:</strong> ZKTeco + ZKBioTime.Net.</li>
-                            <li contenteditable="true"><strong>Red:</strong> TCP/IP en Red Local.</li>
-                            <li contenteditable="true"><strong>Tablas clave:</strong> <code>USUARIO</code> (Templates faciales y de huella) y <code>LOG_MARCACION</code>.</li>
-                            <li contenteditable="true"><strong>Algoritmo:</strong> Match 1:N (&lt; 1s).</li>
+                            <li><strong>Hardware:</strong> ZKTeco + ZKBioTime.Net[cite: 1].</li>
+                            <li><strong>Red:</strong> TCP/IP en Red Local[cite: 1].</li>
+                            <li><strong>Tablas clave:</strong> <code>USUARIO</code> y <code>LOG_MARCACION</code>[cite: 1].</li>
+                            <li><strong>Algoritmo:</strong> Match 1:N (&lt; 1s)[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="color: var(--primary);" contenteditable="true">Módulo C: Plataforma RRHH</div>
+                        <div class="card-title" style="color: var(--primary);">Módulo C: Plataforma RRHH</div>
                         <ul class="styled-list" style="margin-top: 0.5rem;">
-                            <li contenteditable="true"><strong>Stack:</strong> PHP 8 (SSR), MySQL, Bootstrap 5.3, JS Vanilla.</li>
-                            <li contenteditable="true"><strong>Tablas MySQL:</strong> <code>empleados</code>, <code>registros_asistencia</code>, <code>configuracion</code>.</li>
-                            <li contenteditable="true"><strong>Reportes:</strong> Exportador nativo a Excel (<code>.xls</code>).</li>
+                            <li><strong>Stack:</strong> PHP 8 (SSR), MySQL, Bootstrap 5.3, JS Vanilla[cite: 1].</li>
+                            <li><strong>Tablas MySQL:</strong> <code>empleados</code>, <code>registros_asistencia</code>, <code>configuracion</code>[cite: 1].</li>
+                            <li><strong>Reportes:</strong> Exportador nativo a Excel (<code>.xls</code>)[cite: 1].</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 7: MANUAL DE USUARIO & FAQ -->
+            <!-- DIAPO 7 -->
             <div class="slide" id="slide-7">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Operación y Buenas Prácticas</p>
-                        <h2 contenteditable="true">Manual de Usuario & Contingencias</h2>
+                        <p>Operación y Buenas Prácticas</p>
+                        <h2>Manual de Usuario & Contingencias</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 07</span>
+                    <span class="badge-tag">DIAPO 07</span>
                 </div>
 
                 <div class="grid-2">
                     <div class="card">
-                        <div class="card-title" style="margin-bottom: 0.75rem;" contenteditable="true">📷 Operativa del Reloj iFace (Hardware)</div>
+                        <div class="card-title" style="margin-bottom: 0.75rem;">📷 Operativa del Reloj iFace (Hardware)</div>
                         <ul class="styled-list">
-                            <li contenteditable="true"><strong>Identificación:</strong> Reconocimiento facial, huella dactilar, clave o tarjeta RFID.</li>
-                            <li contenteditable="true"><strong>Uso correcto:</strong> Rostro a 0.5m erguido y neutral. Para huellas, usar dedo índice o medio bien centrado.</li>
-                            <li contenteditable="true"><strong>Falla de red/Luz:</strong> Memoria no volátil offline. Sincroniza al volver el enlace o mediante USB FAT32.</li>
+                            <li><strong>Identificación:</strong> Reconocimiento facial, huella dactilar, clave o tarjeta RFID[cite: 1].</li>
+                            <li><strong>Uso correcto:</strong> Rostro a 0.5m erguido y neutral[cite: 1]. Para huellas, usar dedo índice o medio centrado[cite: 1].</li>
+                            <li><strong>Falla de red/Luz:</strong> Memoria no volátil offline[cite: 1]. Sincroniza al volver la red o mediante USB FAT32[cite: 1].</li>
                         </ul>
                     </div>
 
                     <div class="card">
-                        <div class="card-title" style="margin-bottom: 0.75rem;" contenteditable="true">🎨 Matriz Mensual de Asistencia (Simbología)</div>
+                        <div class="card-title" style="margin-bottom: 0.75rem;">🎨 Matriz Mensual de Asistencia (Simbología)</div>
                         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                            <div><span class="status-pill bg-verde">Verde</span> <span style="font-size: 0.85rem;" contenteditable="true">Asistencia Correcta</span></div>
-                            <div><span class="status-pill bg-naranja">Naranja</span> <span style="font-size: 0.85rem;" contenteditable="true">Llegada Tarde (Excede tolerancia)</span></div>
-                            <div><span class="status-pill bg-azul">Azul (!)</span> <span style="font-size: 0.85rem;" contenteditable="true">Turno Incompleto / Olvido de Salida</span></div>
-                            <div><span class="status-pill bg-rojo">Rojo</span> <span style="font-size: 0.85rem;" contenteditable="true">Ausente / Falta Justificada</span></div>
-                            <div><span class="status-pill bg-gris">Gris (🌙)</span> <span style="font-size: 0.85rem;" contenteditable="true">Fichada Fuera de Turno</span></div>
+                            <div><span class="status-pill bg-verde">Verde</span> <span style="font-size: 0.85rem;">Asistencia Correcta[cite: 1]</span></div>
+                            <div><span class="status-pill bg-naranja">Naranja</span> <span style="font-size: 0.85rem;">Llegada Tarde (Excede tolerancia)[cite: 1]</span></div>
+                            <div><span class="status-pill bg-azul">Azul (!)</span> <span style="font-size: 0.85rem;">Turno Incompleto / Olvido de Salida[cite: 1]</span></div>
+                            <div><span class="status-pill bg-rojo">Rojo</span> <span style="font-size: 0.85rem;">Ausente / Falta Justificada[cite: 1]</span></div>
+                            <div><span class="status-pill bg-gris">Gris (🌙)</span> <span style="font-size: 0.85rem;">Fichada Fuera de Turno[cite: 1]</span></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- DIAPO 8: LANDING PAGE SHOWCASE -->
+            <!-- DIAPO 8 -->
             <div class="slide" id="slide-8">
                 <div class="slide-header">
                     <div class="slide-title-group">
-                        <p contenteditable="true">Demostración Visual</p>
-                        <h2 contenteditable="true">Landing Page & Presencia Digital</h2>
+                        <p>Demostración Visual</p>
+                        <h2>Landing Page & Presencia Digital</h2>
                     </div>
-                    <span class="badge-tag" contenteditable="true">DIAPO 08</span>
+                    <span class="badge-tag">DIAPO 08</span>
                 </div>
 
                 <div class="card" style="height: 80%; justify-content: center; align-items: center; background: #0f172a; border-color: #334155;">
                     <div style="text-align: center; color: white;">
-                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--primary-bright); margin-bottom: 0.5rem;" contenteditable="true">
+                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--primary-bright); margin-bottom: 0.5rem;">
                             🌐 Sitio Web Oficial: tadin.com.ar
                         </p>
-                        <p style="color: var(--text-dark-muted); max-width: 600px; margin: 0 auto 1.5rem auto;" contenteditable="true">
+                        <p style="color: var(--text-dark-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">
                             Diseñado con enfoque en conversión industrial, velocidad de carga y adaptabilidad total a pantallas de computadoras y dispositivos móviles.
                         </p>
-                        <div class="code-box" style="display: inline-block; text-align: left;" contenteditable="true">
+                        <div class="code-box" style="display: inline-block; text-align: left;">
                             HTTP GET / 200 OK<br>
                             SSL Certificate: Active (HTTPS)<br>
                             Lead Capture Integration: Active
@@ -752,13 +717,13 @@
                 </div>
             </div>
 
-            <!-- DIAPO 9: CIERRE / CARÁTULA FINAL -->
+            <!-- DIAPO 9 -->
             <div class="slide theme-dark" id="slide-9">
                 <div class="cover-content" style="text-align: center;">
-                    <h1 class="cover-title" contenteditable="true">¡Muchas Gracias!</h1>
-                    <p class="cover-subtitle" contenteditable="true">Proyecto TA-DIN • Preguntas y Comentarios</p>
+                    <h1 class="cover-title">¡Muchas Gracias!</h1>
+                    <p class="cover-subtitle">Proyecto TA-DIN • Preguntas y Comentarios</p>
                     <div style="margin-top: 2rem;">
-                        <span class="badge-tag" contenteditable="true">EQUIPO N° 6 • SEPTIEMBRE 2026</span>
+                        <span class="badge-tag">EQUIPO N° 6 • SEPTIEMBRE 2026</span>
                     </div>
                 </div>
             </div>
@@ -805,7 +770,6 @@
             updateSlide();
         }
 
-        // Navegación mediante teclado (flechas de dirección)
         document.addEventListener('keydown', function(e) {
             if (e.key === "ArrowRight" || e.key === "PageDown") {
                 changeSlide(1);
@@ -814,8 +778,7 @@
             }
         });
 
-        // Inicializar
         updateSlide();
     </script>
 </body>
-</html>.ar/contacto)[cite: 1]
+</html>
